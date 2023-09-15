@@ -1,0 +1,467 @@
+    /*  Declaración de variables  */
+    :root {
+
+        --header-height: 60px;
+    
+            /* Colores --oscuro: rgb(18, 1 ,1);*/
+           --White: rgb(255, 249, 198);
+           --n3: rgb(255, 85, 18);
+           --n2: rgb(255, 135, 1);
+           --n1: rgb(255, 232, 20);
+           --rojo: rgb(255,0,0);
+           --oscuro: rgb(49, 1, 70);
+           --oscuro2: rgba(27, 3 ,37, 0.67);
+           --gris: rgba(184, 185, 152, 0.521);
+           --card-color:  hsla(0, 0%, 90%, 0.808);
+           --White2: rgba(255, 244, 232, 0.582);
+        
+            /*  Tipografia  */
+           --body-font: 'PT Sans', sans-serif;
+           --tittle-font: 'Archivo Black', sans-serif;
+           --altern-font: 'Ruslan Display', cursive;
+    
+            /*  font weights  */
+            --font-md: 400;
+            --font-xl: 700;
+    
+           --big-font: 2rem;
+           --medium-font: 1.5rem;
+           --normal-font: 1rem;
+           --small-font: 0.8rem;
+           --tiny-font:  0.7rem;
+    
+           --font-bold: 700; 
+           --font-medium: 600;
+           --font-normal: 400;
+           --font-tiny:  300;
+    
+           /*spreads*/
+           --sp-0-5: 0.5rem;
+           --sp-0-75: 0.75rem;
+           --sp-1: 1rem;
+           --sp-2: 2rem;
+           --sp2-5: 2.5rem;
+           --sp-3: 3rem;
+    
+           --z-fixed: 100;
+           --z-modal: 200;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+      
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    *, *::before, 
+    *::after{
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: var(--tittle-font);
+    }
+
+    button,
+    input,
+    textarea{
+        font-family: var(--body-font);
+        font-size: var(--normal-font);
+    }
+
+    html,
+    body{
+        height: 100%;
+    }
+
+    html{
+        font-size: 16px;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+    .fuego3{
+        display: block;
+        margin: 0 auto;
+        width: 44%;
+        height: auto;
+        animation: flameAnimation 1.77s infinite alternate-reverse;
+    }
+
+    .go_store:hover{
+        animation: none;
+    }
+
+    .text_fig{
+        color: var(--gris);
+    }
+
+    figcaption {
+        display:none; 
+        transition: all .5s;
+        font-size: var(--tiny-font);
+    }
+    
+    figure:hover > figcaption {
+        display:block;
+        margin: 10px auto;
+        transition: all .5s;
+        text-align: center;
+        text-decoration-line: none;
+    }
+
+
+        /* --------------    LOADER    --------------*/ 
+
+        
+
+        .loader{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--White);
+            z-index: var(--z-modal);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .loader--container{
+            border: 1px var(--n3);
+        }
+        
+    
+        .loader--hidden{
+            opacity:0;
+            visibility: hidden;
+            transition: all .5s ease-in-out;
+        
+        }
+        .loader--container span{
+            display: inline-block;
+            width: var(--sp-3);
+            height: var(--sp-3);
+            background-color: var(--n3);
+            border-radius: 50%;
+            animation: pulse 1s infinite ease-in-out;
+        }
+
+
+
+    /*----------  MAIN ----------*/
+    header{
+        padding: 1rem;
+        display: flex;
+        place-items: center;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    body{
+        font-family: var(--body-font);
+        font-size: 16px;
+        font-weight: lighter;
+        background-color: var(--oscuro);
+        gap: 14px;
+    }
+
+    section{
+        justify-self: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--sp-1);
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .main{
+        padding-top: var(--sp-3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img_menu{
+        width: 40%;
+        height: auto;
+    }
+
+
+    .card_mirey{
+        background-color: var(--oscuro);
+        border-radius: 11%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ---------   LETRA DE FUEGO    --------------*/
+
+    .fireLetter{
+        color: var(--White);
+        text-shadow:
+        1px 1px 2px var(--oscuro),
+        0 0 1em var(--n3),
+        0 0 0.3em var(--n1);
+        animation: fireLetterAnimation 5s infinite;
+    }
+
+
+    .mr_fuego{
+        width: 30%;
+        height: auto;
+    }
+
+    .slogan{
+        font-family: var(--body-font);
+        font-size: 20px;
+        color: var(--n2);
+        width: 330px;
+        align-self: center;
+        text-align: center;
+        text-justify: auto;
+    }
+
+    .text_mirey{
+        font-family: var(--tittle-font);
+        font-size: 30px;
+        color: var(--White);
+        width: 330px;
+        align-self: center;
+        text-align: center;
+        text-justify: auto;
+        text-shadow:
+        1px 1px 2px var(--oscuro),
+        0 0 1em var(--n2),
+        0 0 0.3em var(--n3);
+        animation: fireLetterAnimation 3s infinite;
+    }
+
+    .container_menu{
+        align-self: center;
+        margin-top: 4%;
+        display: grid;
+        grid-template-columns: repeat(5,20%);
+        align-items: center;
+        align-self: center;
+    }
+
+    .cont_btn--menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .text__menuIni{
+        font-family: var(--body-font);
+        font-size: large;
+        text-align: center;
+        color: var(--White);
+        text-shadow:
+        1px 1px 2px var(--oscuro),
+        0 0 0.6em var(--n3),
+        0 0 0.2em var(--n3);
+    }
+
+    .img_menu{
+        border-radius: 10%;
+        /*animation: flameAnimation 2s infinite;*/
+    } 
+
+
+
+
+    /* ------ EFECTOS --------*/
+    .a_img_menu :hover{
+        animation: none;
+    }
+
+
+    /*RESPONSIVE DESIGN: 768px o menos*/
+
+    @media (width <= 768px) {
+        body{
+            --big-font: 1.5rem;
+            --medium-font: 1em;
+            --normal-font: 0.8rem;
+            --small-font: 0.7rem;
+            --tiny-font:  0.6rem;
+        }
+    }
+
+
+    @media (width <= 768px){
+        .mr_fuego{
+            width: 25%;
+            height: auto;
+        }
+        .cont_btn--menu{
+            flex-direction: row;
+        }
+        .container_menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: var(--sp-1);
+        }
+
+        .img_menu{
+            width: 35%;
+            height: auto;
+        }
+    }
+    
+
+
+
+
+        /* FUNCIONES */
+
+    @keyframes pulse{
+        0%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
+  
+    @keyframes fireLetterAnimation {
+            0% {
+                color: #CCCCFF;
+                text-shadow: 0 0 40px #66CCFF 0 0 20px #66CCFF 0 0 5px #66CCFF
+            }
+            20% {
+                color: #CCCCCC;
+                text-shadow: 0 0 80px #66CCFF, 0 0 20px var(--n2) 0 0 10px #66CCFF;
+            }
+            40% {
+                color: #ffdb66;
+                text-shadow: 0 0 80px var(--n2), 0 0 20px #66CCFF, 0 0 10px var(--n2);
+            }
+            60% {
+                color: #FFFF99;
+                text-shadow: 0 0 80px var(--n2), 0 0 40px var(--n2), 0 0 10px var(--n2);
+            }
+            80% {
+                color: var(--White);
+                text-shadow: 0 0 80px var(--n3), 0 0 50px var(--n3), 0 0 12px var(--n3);
+            }
+            100% {
+                color: var(--White);
+                text-shadow: 0 0 80px var(--n3), 0 0 50px var(--n3), 0 0 12px var(--n3);
+            }
+    }    
+
+    @keyframes flameAnimation {
+        0% {
+            transform: scaleY(1) scaleX(1.03);
+            opacity: 1;
+        }
+        50% {
+            transform: scaleY(1.2) scaleX(1.1);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scaleY(1) scaleX(1.03);
+            opacity: 1;
+        }
+    }
+
+/**********FOOOTER***************/
+
+.footer{
+    align-items: end;
+}
+.footer__top{
+    margin-top: var(--sp-2);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+}
+
+.footer__container .footer__top{
+    display: grid;
+    row-gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer__left{
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__title{
+    font-size: var(--small-font);
+    margin-bottom: var(--sp-0-5);
+    color: var(--White2);
+    text-align: center;
+}
+
+.footer__title1{
+    font-size: var(--small-font);
+    margin-bottom: var(--sp-0-75);
+    color: var(--White2);
+    text-align: center;
+}
+
+.footer__text{
+    font-size: var(--tiny-font);
+    text-align: center;
+    color: var(--gris)
+}
+
+.footer__text2{
+    text-align: center;
+    color: var(--gris);
+}
+
+
+.footer__social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-1);
+    margin-left: 0;
+}
+
+.footer__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--sp2-5);
+    height: var(--sp2-5);
+    color: var(--White);
+    background-color: var(--n3);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transform: background-color .3s ease-in-out;
+}
+
+.footer__link:hover{
+    background-color: var(--n1);
+    color: var(--oscuro);
+}
